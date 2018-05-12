@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'found/lib/Link';
 
-function LinkItem(props) {
+const LinkItem = (props) => {
   return (
     <li>
       <Link

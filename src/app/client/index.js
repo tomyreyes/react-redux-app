@@ -11,7 +11,12 @@ import resolver from 'found/lib/resolver';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { combineReducers, compose, createStore } from 'redux';
+import {
+  combineReducers,
+  compose,
+  createStore,
+  applyMiddleware,
+} from 'redux';
 import logger from 'redux-logger';
 
 import routeConfig from '../routeConfig';
@@ -25,12 +30,12 @@ const store = createStore(
       protocol: new BrowserProtocol(),
       middlewares: [
         queryMiddleware,
-        logger,
       ],
     }),
     createMatchEnhancer(
       new Matcher(routeConfig),
     ),
+    applyMiddleware(logger),
   ),
 );
 
