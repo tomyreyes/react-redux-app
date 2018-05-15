@@ -20,10 +20,12 @@ import {
 import logger from 'redux-logger';
 
 import routeConfig from '../routeConfig';
+import { messagesReducer } from './reducers/MessagesReducer';
 
 const store = createStore(
   combineReducers({
     found: foundReducer,
+    messages: messagesReducer
   }),
   compose(
     createHistoryEnhancer({
