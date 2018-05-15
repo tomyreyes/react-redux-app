@@ -1,5 +1,6 @@
 import * as React from 'react';
 import LinkItem from './LinkItem.react';
+import Messages from './Messages';
 
 function App(props) {
   return (
@@ -11,6 +12,9 @@ function App(props) {
         </LinkItem>
         <LinkItem to="/foo">
           foo
+        </LinkItem>
+        <LinkItem to="/Messages">
+          Messages
         </LinkItem>
       </ul>
       {props.children}

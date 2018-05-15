@@ -94,8 +94,8 @@ export default function coreConfig(options) {
       path: path.dirname(options.outputPath),
       includeManifest: 'manifest'
     })),
-    plugin(new HtmlWebpackPlugin({
-      template: './src/src/index.html'
+    plugin(new HtmlWebpackPlugin({ //EXTRA /SRC CAUSED ERROR
+      template: './src/index.html'
     }))
   )
 }
