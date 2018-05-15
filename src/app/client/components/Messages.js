@@ -15,8 +15,8 @@ class Messages extends Component {
       const messageList = messages.messages.map((message, id)=>{
         return (<div key={id}>
         <span><h3>{message.text}</h3>
-        <h5>{message.date}</h5>
-        <LinkItem to={`/messages/${message.id}`}>
+        <h5>{message.created_at}</h5>
+        <LinkItem to={`/Messages/${message.id}`}>
         see more
         </LinkItem>
         </span>
